@@ -1,0 +1,12 @@
+<!-- when you want to show all of the pirates -->
+
+<h1>Pirates!</h1>
+<p>arrrrrrrrrgh</p>
+
+<ul>
+<% @pirates.each do |pirate|%>
+  <li><em>Name:<%= pirate.name %></em></li><!-- you use = sign when you print data on page -->
+  <li>Weight:<%= pirate.weight %></li>
+  <li>Height:<%= pirate.height %></li>
+<% end %>
+</ul>
