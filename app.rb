@@ -2,24 +2,22 @@ require './environment'
 
 module FormsLab
   class App < Sinatra::Base
-    get '/' do
-      erb :root
+
+    get '/pirates' do
+      @pirates = Pirate.all
+
+      erb :'pirates/index'
     end
 
-    get '/new' do
-      erb :'pirates/new'
-    end
-
-    post '/pirates' do
-      @pirate = Pirate.new(params[:pirate])
-
-      params[:pirate][:ships].each do |details|
-        Ship.new(details)
-      end
-      @ships = Ship.all
+    get '/pirates/:id' do #'/:id' is known as the dynamic segment
+      @pirate = Pirate.find(params[:id])
 
       erb :'pirates/show'
     end
 
+    get '/pirates/new' do #don't do just /new, be specific because in this app there's pirate and ships
+
+      erb :'pirates/new'
+    end
   end
 end
