@@ -1,7 +1,10 @@
 <%= @pirate.name %>
 
+<ul>
+<h2>Ships</h2>
 <% @pirate.ships.each do |ship| %>
-  <%= ship.name %></br>
-  <%= ship.category%></br>
-  <%= ship.booty %></br>
+  <li><%= ship.name %></li></br>
+  <li><%= ship.category%></li></br>
+  <li><%= ship.booty %></li></br>
 <%end%>
+</ul>
