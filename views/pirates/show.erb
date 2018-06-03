@@ -3,8 +3,8 @@
 <ul>
 <h2>Ships</h2>
 <% @pirate.ships.each do |ship| %>
-  <li><%= ship.name %></li></br>
-  <li><%= ship.category%></li></br>
-  <li><%= ship.booty %></li></br>
+  <li>Ship Name:<%= ship.name %></li></br>
+  <li>Category:<%= ship.category%></li></br>
+  <li>Booty:<%= ship.booty %></li></br>
 <%end%>
 </ul>
