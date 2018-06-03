@@ -4,7 +4,8 @@
 <ul>
 <h2>Ships</h2>
 <% @pirate.ships.each_with_index do |ship, index| %>
-  <li>Ship Name:<%= ship.name %></li></br>
+
+  <%=index+1%><li>Ship Name:<%= ship.name %></li></br>
   <li>Category:<%= ship.category%></li></br>
   <li>Booty:<%= ship.booty %></li></br>
 <%end%>
